@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Owl Carousel -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- AlpineJs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.js">
+    <!-- Font Asowme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Output Css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!-- topbar -->
+    <div class="topbar bg-dark max-lg:hidden bg-black">
+        <div class="container mx-auto">
+            <div class="flex justify-between text-sm">
+                <div class="social-media-font flex items-center justify-end text-white gap-10">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook hover:text-cyan-200"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp hover:text-cyan-200"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube hover:text-cyan-200"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter hover:text-cyan-200"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram hover:text-cyan-200"></i>
+                    </a>
+                </div>
+                <div class="contact-detail flex items-center text-white">
+                    <a href="#" class="bg-red-600 px-5 py-3">Get Quote</a>
+                    <a href="#" class="bg-slate-600 px-5 py-3">Any Help</a>
+                    <a href="#" class="px-5 py-3">About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <div class="search-navbar py-4 px-16">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="logo">
+                <img src="assets/imgs/logo.png" class="w-full" alt="">
+            </a>
+
+            <form action="index.html" class="max-xl:hidden">
+                <div class="border">
+                    <i class="fa-solid fa-magnifying-glass px-3"></i>
+                    <input type="search" class="w-[500px] p-3 outline-none">
+                    <a href="#" class="btn bg-red-600 text-white hover:bg-red-500 rounded">search</a>
+                </div>
+            </form>
+            <div class="text-red-600 text-lg flex justify-center items-center font-semibold gap-2">
+                <a href="#"><i class="fa-solid fa-phone text-2xl"></i></a>
+                +91-9910705147
+                <div class="text-sm text-black">(For Support)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hero-area -->
+    <div class="hero-area relative">
+        <div class="hero-area-img brightness-50 w-full h-[470px]  border-b-2 ">
+            <img src="assets/imgs/hero-area.jpg" class="h-full object-cover w-full" alt="">
+        </div>
+        
+        <div class="hero-area-content text-center mx-auto text-white absolute left-10 top-16">
+                    <h2 class="font-semibold text-3xl ">Top Logistics Companies in India, Committed Towars Better Services.
+                        Enjoy Upto 25% Savings</h2>
+                    <p class="mt-5 font-semibold text-lg">Let our Team make you moving convenient and easy.</p>
+                    <div class="py-12 bg-white text-black mt-6">
+                        <h2 class="text-2xl font-bold">Your Reliable Shifting Partner</h2>
+                        <div>
+                            <form action="index.html" class="gap-6 mt-6">
+                                <select name="service" id="service" class="border w-36 p-2 rounded">
+                                    <option value="">Select Service</option>
+                                    <option value="">Office Shifting</option>
+                                    <option value="">Household Service</option>
+                                    <option value="">Household Car Shifting</option>
+                                    <option value="">Household Bike Shifting</option>
+                                </select>
+                                <select name="category" id="category" class="border w-36 p-2 rounded">
+                                    <option value="">Select Service</option>
+                                    <option value="">Office Shifting</option>
+                                    <option value="">Household Service</option>
+                                    <option value="">Household Car Shifting</option>
+                                    <option value="">Household Bike Shifting</option>
+                                </select>
+                                <input type="search" placeholder="City From *" class="border w-1/4 p-2 rounded">
+                                <input type="search" placeholder="City To *" class="border w-1/4 p-2 rounded">
+                                <button class="btn bg-red-600 hover:bg-red-500 text-white rounded">Next</button>
+                            </form>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <!-- services section -->
+    <section class="section-column">
+        <section class="px-16 py-6 bg-slate-400">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3">
+                    <div class="card bg-white w-96 p-4 flex gap-6 text-slate-600 max-lg:m-auto">
+                        <div class="card-img">
+                            <img src="assets/imgs/service1.png" alt="">
+                        </div>
+                        <div class="card-content text-black font-semibold">
+                            2500 + <br>
+                            <span class="text-slate-500">DAILY HAPPY CUSTOMERS</span>
+                        </div>
+                    </div>
+                    <div class="card bg-white w-96 p-4 flex gap-6 text-slate-600 max-lg:m-auto">
+                        <div class="card-img">
+                            <img src="assets/imgs/service2.png" alt="">
+                        </div>
+                        <div class="card-content text-black font-semibold">
+                            4387 + <br>
+                            <span class="text-slate-500">VERIFIED SERVICE PROVIDERS</span>
+                        </div>
+                    </div>
+                    <div class="card bg-white w-96 p-4 flex gap-6 text-slate-600 max-lg:m-auto">
+                        <div class="card-img">
+                            <img src="assets/imgs/service3.png" alt="">
+                        </div>
+                        <div class="card-content text-black font-semibold">
+                            4.9/5 <br>
+                            <span class="text-slate-500">AVERAGE RATING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hiring px-16 py-6 bg-slate-200">
+            <div class="container mx-auto">
+                <h2 class="heading text-center text-2xl font-semibold">
+                    Process of Hiring Best Movers
+                </h2>
+                
+                <div class="">
+                    <div class="flex justify-between">
+                        <div class="card text-center space-y-6">
+                            <div class="card-img flex justify-center">
+                                <img src="assets/imgs/steps1.png" alt="">
+                            </div>
+                            <div class="card-content text-center">
+                                <span class="font-semibold">
+                                    Step 1 <br>
+                                    Share Your Requirement <br>
+                                </span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, fugiat.
+                            </div>
+                        </div>
+                        <div class="card text-center space-y-6">
+                            <div class="card-img flex justify-center">
+                                <img src="assets/imgs/steps2.png" alt="">
+                            </div>
+                            <div class="card-content text-center">
+                                <span class="font-semibold">
+                                    Step 2 <br>
+                                    Find the Perfect Matches <br>
+                                </span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, fugiat.
+                            </div>
+                        </div>
+                        <div class="card text-center space-y-6">
+                            <div class="card-img flex justify-center">
+                                <img src="assets/imgs/steps3.png" alt="">
+                            </div>
+                            <div class="card-content text-center">
+                                <span class="font-semibold">
+                                    Step 3 <br>
+                                    Compare and Hire <br>
+                                </span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, fugiat.
+                            </div>
+                        </div>
+                        <div class="card text-center space-y-6">
+                            <div class="card-img flex justify-center">
+                                <img src="assets/imgs/steps4.png" alt="">
+                            </div>
+                            <div class="card-content text-center">
+                                <span class="font-semibold">
+                                    Step 4 <br>
+                                    Schedule Your Move <br>
+                                </span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, fugiat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <section class="container mx-auto">
+            <div class="grid grid-cols-12 gap-5">
+                <div class="cols-span-6 border">
+                    <img src="assets/imgs/package-pic.jpg" alt="" class="w-full border">
+                </div>
+                    <div class="img-content col-span-6">
+                        <h2 class="text-3xl font-bold">
+                            Who We Are
+                        </h2>
+                        <p class="w-full text">
+                            Expertly and attentively guiding through relocations Or Moving with Skill and Attention Revolutionizing Relocations: Efficiency. Trust. Satisfaction. Because we understand the value and importance of your belongings.
+                        </p>
+                    </div>
+            </div>
+        </section> -->
+        
+    </section>
+</body>
+<!-- All JS Links -->
+<!-- Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Custom Js -->
+<script src="assets/js/main.js"></script>
+<!-- Js Link Ends Here -->
+
+</html>
