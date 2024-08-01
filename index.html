@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Owl Carousel -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <!-- Owl Carousel min.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <!-- AlpineJs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.js">
     <!-- Font Asowme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Animate Css -->
@@ -21,6 +19,7 @@
 </head>
 
 <body>
+
     <!-- topbar -->
     <div class="topbar bg-dark max-lg:hidden bg-black">
         <div class="container mx-auto">
@@ -51,30 +50,55 @@
         </div>
     </div>
 
-    <!-- navbar -->
-    <div class="search-navbar py-4 px-16">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="logo">
-                <img src="assets/imgs/logo.png" class="w-full" alt="">
+    <nav class="container mx-auto flex flex-col lg:flex-row justify-around lg:items-center relative" x-data="{ showSidebar: false }">
+        <!-- Logo and Toggle Button -->
+        <div class="flex items-center justify-between w-full lg:w-auto relative">
+            <a href="#" id="logo" class="flex items-center justify-between text-xl md:text-3xl font-extrabold text-primary">
+                <img src="assets/imgs/logo.png" alt="Shiva Furnitures Logo" class="">
+                
             </a>
-
-            <form action="index.html" class="max-xl:hidden">
-                <div class="border">
-                    <i class="fa-solid fa-magnifying-glass px-3"></i>
-                    <input type="search" class="w-[500px] p-3 outline-none">
-                    <a href="#" class="btn bg-red-600 text-white hover:bg-red-500 rounded">search</a>
-                </div>
-            </form>
-            <div class="text-red-600 text-lg flex justify-center items-center font-semibold gap-2">
-                <a href="#"><i class="fa-solid fa-phone text-2xl"></i></a>
-                +91-9910705147
-                <div class="text-sm text-black">(For Support)</div>
-            </div>
+            <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar" aria-label="Toggle sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </div>
+    
+        <!-- Desktop Menu -->
+        <form action="index.html" class="max-xl:hidden">
+            <div class="border">
+                <i class="fa-solid fa-magnifying-glass px-3"></i>
+                <input type="search" class="w-[500px] p-3 outline-none">
+                <a href="#" class="btn bg-red-600 text-white hover:bg-red-500 rounded">search</a>
+            </div>
 
-    <!-- hero-area -->
-    <div class="hero-area relative">
+        </form>
+    
+        <!-- Mobile Sidebar -->
+        <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }" 
+             class="fixed inset-y-0 left-0 w-64 bg-black text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
+            <div class="p-4">
+                <button @click="showSidebar = false" class="text-white">
+                    <i class="fas fa-times fa-lg"></i>
+                </button>
+            </div>
+            <ul class="mt-5 tracking-wider space-y-4 text-sm font-medium uppercase">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">Packers and Movers</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">Car Transpartation</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">Hire Truck Tempo</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">Cargo Services</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">Transport Services</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">Warhouse Services</a></li>
+            </ul>
+        </div>
+
+        <div class="text-red-600 text-lg flex justify-center items-center font-semibold gap-2 max-lg:hidden">
+            <a href="#"><i class="fa-solid fa-phone text-2xl"></i></a>
+            +91-9910705147
+            <div class="text-sm text-black">(For Support)</div>
+        </div>
+    </nav>
+    
+    <!-- banner -->
+    <div class="banner relative hidden lg:block">
         <div class="hero-area-img brightness-50 w-full h-[470px]  border-b-2 ">
             <img src="assets/imgs/hero-area.jpg" class="h-full object-cover w-full" alt="">
         </div>
@@ -112,6 +136,7 @@
 
     <!-- services section -->
     <section class="section-column">
+       
         <section class="px-16 py-6 bg-slate-400">
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-3">
@@ -212,7 +237,7 @@
             <div class="grid lg:grid-cols-3 gap-6 mt-10">
                 <div class="card border rounded-lg bg-white relative overflow-hidden group shadow-lg">
                     <div class="card-img overflow-hidden h-[250px]">
-                        <img src="assets/imgs/our-service1.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-125 duration-700" alt="">
+                        <img src="assets/imgs/our-service1.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-110 duration-700" alt="">
                     </div>
                     <div class="like-btn absolute top-4 right-4">
                         <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
@@ -238,7 +263,7 @@
                 </div>
                 <div class="card border rounded-lg bg-white relative overflow-hidden group shadow-lg">
                     <div class="card-img overflow-hidden h-[250px]">
-                        <img src="assets/imgs/our-service2.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-125 duration-700" alt="">
+                        <img src="assets/imgs/our-service2.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-110 duration-700" alt="">
                     </div>
                     <div class="like-btn absolute top-4 right-4">
                         <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
@@ -264,7 +289,7 @@
                 </div>
                 <div class="card border rounded-lg bg-white relative overflow-hidden group shadow-lg">
                     <div class="card-img overflow-hidden h-[250px]">
-                        <img src="assets/imgs/our-service3.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-125 duration-700" alt="">
+                        <img src="assets/imgs/our-service3.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-110 duration-700" alt="">
                     </div>
                     <div class="like-btn absolute top-4 right-4">
                         <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
@@ -292,7 +317,7 @@
             <div class="grid lg:grid-cols-3 gap-6 mt-10">
                 <div class="card border rounded-lg bg-white relative overflow-hidden group shadow-lg">
                     <div class="card-img overflow-hidden h-[250px]">
-                        <img src="assets/imgs/our-service4.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-125 duration-700" alt="">
+                        <img src="assets/imgs/our-service4.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-110 duration-700" alt="">
                     </div>
                     <div class="like-btn absolute top-4 right-4">
                         <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
@@ -318,7 +343,7 @@
                 </div>
                 <div class="card border rounded-lg bg-white relative overflow-hidden group shadow-lg">
                     <div class="card-img overflow-hidden h-[250px]">
-                        <img src="assets/imgs/our-service5.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-125 duration-700" alt="">
+                        <img src="assets/imgs/our-service5.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-110 duration-700" alt="">
                     </div>
                     <div class="like-btn absolute top-4 right-4">
                         <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
@@ -344,7 +369,7 @@
                 </div>
                 <div class="card border rounded-lg bg-white relative overflow-hidden group shadow-lg">
                     <div class="card-img overflow-hidden h-[250px]">
-                        <img src="assets/imgs/our-service6.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-125 duration-700" alt="">
+                        <img src="assets/imgs/our-service6.jpg" class="h-full w-full object-contain rounded-t-lg group-hover:scale-110 duration-700" alt="">
                     </div>
                     <div class="like-btn absolute top-4 right-4">
                         <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
@@ -605,6 +630,8 @@
     </div>
 </body>
 <!-- All JS Links -->
+<!-- AlpineJs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.js" defer></script>
 <!-- Jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- Owl Carousel -->
